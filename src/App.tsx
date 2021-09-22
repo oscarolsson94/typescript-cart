@@ -20,6 +20,12 @@ export type CartItemType = {
   amount: number;
 };
 
+const getTotalItems = () => null;
+
+const handleAddToCart = () => null;
+
+const handleRemoveFromCart = () => null;
+
 const getProducts = async (): Promise<CartItemType[]> =>
   await (await fetch("https://fakestoreapi.com/products")).json();
 
@@ -28,6 +34,9 @@ const App = () => {
     "products",
     getProducts
   );
+
+  if (isLoading) return <LinearProgress />;
+  if (error) return <div>Something went wrong...</div>;
   return <div className="App">Start</div>;
 };
 
