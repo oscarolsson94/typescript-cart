@@ -21,7 +21,8 @@ export type CartItemType = {
   amount: number;
 };
 
-const getTotalItems = (items: CartItemType[]) => null;
+const getTotalItems = (items: CartItemType[]) =>
+  items.reduce((acc: number, item) => acc + item.amount, 0);
 
 const handleAddToCart = (clickedItem: CartItemType) => null;
 
