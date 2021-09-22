@@ -1,3 +1,11 @@
-import styled from "styled-components";
+import Button from "@material-ui/core/Button";
+//Types
+import { CartItemType } from "../App";
+//Styles
+import { Wrapper } from "./CartItem.styles";
 
-export const Wrapper = styled.div``;
+const CartItem: React.FC = () => {
+  return <div>Cart Item</div>;
+};
+
+export default CartItem;
